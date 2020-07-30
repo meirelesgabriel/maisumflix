@@ -5,10 +5,22 @@ import PageDefault from '../../../components/PageDefault'
 function CadastroCategoria() {
     return(
         <PageDefault>
-            <h1>Cadastro de Categoria</h1>
+            <form>
+                <label>
+                Nome da Categoria:
+                <input
+                    type="text"
+                />
+                </label>
 
-            <Link to ="/">
-                Ir para a home
+                <button>
+                Cadastrar
+                </button>
+            </form>
+
+
+            <Link to="/">
+                Ir para home
             </Link>
         </PageDefault>
     )
