@@ -37,7 +37,6 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    console.log('alo alo brasil');
     const URL_TOP = 'http://localhost:8080/categorias';
 
     fetch(URL_TOP)
