@@ -37,7 +37,9 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const URL_TOP = 'http://localhost:8080/categorias';
+    const URL_TOP = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://maisumflix.herokuapp.com/categorias';
 
     fetch(URL_TOP)
       .then(async (respostaDoServidor) => {
