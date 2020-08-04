@@ -1,16 +1,54 @@
-import React from 'react';
-import Menu from '../../components/Menu';
-import dadosIniciais from '../../data/dados_iniciais.json';
+/* eslint-disable no-console */
+import React, { useEffect, useState } from 'react';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
-import Footer from '../../components/Footer';
+import PageDefault from '../../components/PageDefault';
+import categoriasRespository from '../../repositories/categorias';
 
 function Home() {
-  return (
-    <div>
-      <Menu />
+  const [dadosIniciais, setDadosIniciais] = useState([]);
 
-      <BannerMain
+  useEffect(() => {
+    categoriasRespository.getAllWithVideos()
+      .then((categoriasComVideos) => {
+        console.log(categoriasComVideos);
+        setDadosIniciais(categoriasComVideos);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
+  return (
+    <PageDefault paddingAll={0}>
+      {dadosIniciais.length === 0 && (<div>Loading...</div>)}
+
+      {dadosIniciais.map((categoria, indice) => {
+        if (indice === 0) {
+          return (
+            <div key={categoria.id}>
+              <BannerMain
+                videoTitle={dadosIniciais[0].videos[0].titulo}
+                url={dadosIniciais[0].videos[0].url}
+                videoDescription={dadosIniciais[0].videos[0].description}
+              />
+              <Carousel
+                ignoreFirstVideo
+                category={dadosIniciais[0]}
+              />
+            </div>
+          );
+        }
+
+        return (
+          <Carousel
+            key={categoria.id}
+            category={categoria}
+          />
+        );
+      })}
+
+      {/* <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
         videoDescription="Após vivenciar uma tragédia pessoal, Dani (Florence Pugh) vai com o namorado Christian (Jack Reynor) e um grupo de amigos até a Suécia para participar de um festival local de verão. Mas, ao invés das férias tranquilas com a qual todos sonhavam, o grupo vai se deparar com rituais bizarros de uma adoração pagã."
@@ -39,10 +77,9 @@ function Home() {
 
       <Carousel
         category={dadosIniciais.categorias[5]}
-      />
+      /> */}
 
-      <Footer />
-    </div>
+    </PageDefault>
   );
 }
 

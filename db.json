@@ -1,16 +1,192 @@
 {
-    "categorias": [
-        {
-            "id": 1,
-            "nome": "Front End",
-            "descricao": "Uma categoria bacanudas",
-            "cor": "#cbd1ff"
-        },
-        {
-            "id": 1,
-            "nome": "Back End",
-            "descricao": "Uma categoria bacanudas",
-            "cor": "#cbd1ff"
-        }
-    ]
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "Músicas",
+      "cor": "#cbd1ff",
+      "link_extra": {
+        "text": "Breve lista com 5 recomendações de músicas",
+        "url": "https://www.youtube.com/"
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Filmes",
+      "cor": "#cbd1ff",
+      "link_extra": {
+        "text": "Breve lista com 5 recomendações de filmes",
+        "url": "https://www.youtube.com/"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Séries",
+      "cor": "#cbd1ff",
+      "link_extra": {
+        "text": "Breve lista com 5 recomendações de séries",
+        "url": "https://www.youtube.com/"
+      }
+    },
+    {
+      "id": 4,
+      "titulo": "Cidades",
+      "cor": "#cbd1ff",
+      "link_extra": {
+        "text": "Breve lista com 5 recomendações de cidades",
+        "url": "https://www.youtube.com/"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "exile (feat. Bon Iver)",
+      "url": "https://www.youtube.com/watch?v=osdoLjUNFnA"
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "my tears ricochet",
+      "url": "https://www.youtube.com/watch?v=OWbDJFtHl3w"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "seven",
+      "url": "https://www.youtube.com/watch?v=pEY-GPsru_E"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "this is me trying",
+      "url": "https://www.youtube.com/watch?v=9bdLTPNrlEg"
+    },
+    {
+      "id": 5,
+      "categoriaId": 1,
+      "titulo": "peace",
+      "url": "https://www.youtube.com/watch?v=HpxX4ZE4KWE"
+    },
+    {
+      "id": 1,
+      "categoriaId": 2,
+      "titulo": "O Show de Trumar - O Show da Vida",
+      "url": "https://www.youtube.com/watch?v=7O7phwapT3k"
+    },
+    {
+      "id": 2,
+      "categoriaId": 2,
+      "titulo": "Ghost",
+      "url": "https://www.youtube.com/watch?v=FJh0tg5Vn00"
+    },
+    {
+      "id": 3,
+      "categoriaId": 2,
+      "titulo": "Your Name",
+      "url": "https://www.youtube.com/watch?v=nLhKXh6sJtk"
+    },
+    {
+      "id": 4,
+      "categoriaId": 2,
+      "titulo": "Noiva Cadáver",
+      "url": "https://www.youtube.com/watch?v=ZE5CbXVheJk"
+    },
+    {
+      "id": 5,
+      "categoriaId": 2,
+      "titulo": "Entrevista com o Vampiro",
+      "url": "https://www.youtube.com/watch?v=zkc_V_U-m4k"
+    },
+    {
+      "id": 1,
+      "categoriaId": 3,
+      "titulo": "Gilmore Girls",
+      "url": "https://www.youtube.com/watch?v=kGGNNSmGDpU"
+    },
+    {
+      "id": 2,
+      "categoriaId": 3,
+      "titulo": "Atypical",
+      "url": "https://www.youtube.com/watch?v=mw6EPR6sNS0"
+    },
+    {
+      "id": 3,
+      "categoriaId": 3,
+      "titulo": "Seinfeld",
+      "url": "https://www.youtube.com/watch?v=SOsbYJ4CfTA"
+    },
+    {
+      "id": 4,
+      "categoriaId": 3,
+      "titulo": "Little Fires Everywhere",
+      "url": "https://www.youtube.com/watch?v=JWGkX8ClhBI"
+    },
+    {
+      "id": 5,
+      "categoriaId": 3,
+      "titulo": "Isabel La Reina",
+      "url": "https://www.youtube.com/watch?v=OGBRmsmBj-k"
+    },
+    {
+      "id": 1,
+      "categoriaId": 4,
+      "titulo": "São Paulo",
+      "url": "https://www.youtube.com/watch?v=-h2DNj-QaYY"
+    },
+    {
+      "id": 2,
+      "categoriaId": 4,
+      "titulo": "Rio de Janeiro",
+      "url": "https://www.youtube.com/watch?v=fA7kQn-l6T4"
+    },
+    {
+      "id": 3,
+      "categoriaId": 4,
+      "titulo": "Ouro Preto",
+      "url": "https://www.youtube.com/watch?v=96pkBujXMHQ"
+    },
+    {
+      "id": 4,
+      "categoriaId": 4,
+      "titulo": "Recife",
+      "url": "https://www.youtube.com/watch?v=VI-vaeoD8MU"
+    },
+    {
+      "id": 5,
+      "categoriaId": 4,
+      "titulo": "Salvador",
+      "url": "https://www.youtube.com/watch?v=ptoptzCJ5H8"
+    },
+    {
+      "titulo": "Vídeo padrão",
+      "url": "https://www.youtube.com/watch?v=FFOzayDpWoI",
+      "categoriaId": 1,
+      "id": 6
+    },
+    {
+      "titulo": "Vídeo padrão",
+      "url": "https://www.youtube.com/watch?v=FFOzayDpWoI",
+      "categoriaId": 1,
+      "id": 7
+    },
+    {
+      "titulo": "Vídeo padrão",
+      "url": "https://www.youtube.com/watch?v=FFOzayDpWoI",
+      "categoriaId": 1,
+      "id": 8
+    },
+    {
+      "titulo": "Vídeo padrão",
+      "url": "https://www.youtube.com/watch?v=FFOzayDpWoI",
+      "categoriaId": 1,
+      "id": 9
+    },
+    {
+      "titulo": "Vídeo padrão",
+      "url": "https://www.youtube.com/watch?v=FFOzayDpWoI",
+      "categoriaId": 4,
+      "id": 10
+    }
+  ]
 }

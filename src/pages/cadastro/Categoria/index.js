@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import Button from '../../../components/Button';
 import FormField from '../../../components/Carousel/components/FormField';
+import useForm from '../../../hooks/useForm';
 
+// declarar um objeto para os valores do formulário
 function CadastroCategoria() {
   const valoresIniciais = {
     nome: '',
@@ -11,30 +13,10 @@ function CadastroCategoria() {
     cor: '',
   };
 
+  const { handleChange, values, clearForm } = useForm(valoresIniciais);
+
   const [categorias, setCategorias] = useState([]);
   // const [nomeDaCategoria, setNomeDaCategoria] = useState('Filmes');
-  const [values, setValues] = useState(valoresIniciais);
-
-  // declarar um objeto para os valores do formulário
-
-  function setValue(chave, valor) {
-    setValues({
-      ...values,
-      [chave]: valor,
-    });
-  }
-
-  function handleChange(infosDoEvento) {
-    // console.log('[nomeDaCategoria]', nomeDaCategoria);
-    // console.log('[infosDoEvento.target.value]', infosDoEvento.target.value);
-    // setNomeDaCategoria(infosDoEvento.target.value);
-    // setValue('nome', infosDoEvento.target.value);
-    setValue(infosDoEvento.target.getAttribute('name'), infosDoEvento.target.value);
-    // dá erro desse jeito (tirar print):
-    // const { getAttribute, value } = infosDoEvento.target;
-    // setValue(getAttribute('name'),
-    // value);
-  }
 
   useEffect(() => {
     const URL_TOP = window.location.hostname.includes('localhost')
@@ -81,7 +63,7 @@ function CadastroCategoria() {
           values,
         ]);
 
-        setValues(valoresIniciais);
+        clearForm(valoresIniciais);
       }}
       >
         <FormField
@@ -145,8 +127,8 @@ function CadastroCategoria() {
 
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>
-            {categoria.nome}
+          <li key={`${categoria.titulo}`}>
+            {categoria.titulo}
           </li>
         ))}
       </ul>
